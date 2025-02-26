@@ -135,14 +135,20 @@ const skills = [
   { icon: faTrello, name: "Trello" },
 ];
 
-function Expertise() {
+interface ExpertiseProps {
+  mode: string;
+}
+
+const isDarkMode = true; // Replace with your actual dark mode state
+
+const Expertise: React.FC<ExpertiseProps> = ({ mode }) => {
   return (
       <div style={{ padding: "100px" }} id="expertise">
         <h2 style={{ textAlign: "center" }}>My Skills</h2>
         <Marquee gradient={false} speed={50} pauseOnHover={true}>
           {skills.map((skill, index) => (
             <div key={index} style={{ textAlign: "center", minWidth: "120px", margin: "0 20px" }}>
-              <FontAwesomeIcon icon={skill.icon} size="3x" />
+              <FontAwesomeIcon icon={skill.icon} size="3x"  style={{ color: mode === "dark" ? "#fff" : "#333" }} />
               <p style={{ marginTop: "5px", fontSize: "14px" }}>{skill.name}</p>
             </div>
           ))}
