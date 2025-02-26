@@ -40,23 +40,6 @@ This is my personal portfolio website built with **React.js** and **TypeScript**
 4. **Open in browser:**
    - Visit `http://localhost:3000` to view the portfolio.
 
-## Build and Deployment
-
-### Build for Production
-```sh
-npm run build  # or yarn build
-```
-
-### Deploy on Vercel
-```sh
-vercel
-```
-
-### Deploy on Netlify
-```sh
-netlify deploy
-```
-
 ## Project Structure
 ```
 📂 my-portfolio
